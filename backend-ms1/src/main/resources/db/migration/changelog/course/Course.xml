@@ -1,0 +1,107 @@
+<!-- db/changelog-1.1-container.xml -->
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+  <!-- Create Container Table -->
+    <changeSet id="1" author="your-name">
+    <createTable tableName="course">
+      <column name="id" type="BIGINT">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+        <column name="code" type="VARCHAR(500)"/>
+        <column name="label" type="VARCHAR(500)"/>
+        <column name="description" type="VARCHAR(500)"/>
+        <column name="start_date" type="TIMESTAMP"/>
+        <column name="end_date" type="TIMESTAMP"/>
+        <column name="duration" type="NUMERIC"/>
+        <column name="price" type="NUMERIC"/>
+        <column name="requirements" type="VARCHAR(500)"/>
+        <column name="learning_outcomes" type="VARCHAR(500)"/>
+
+        <column name="instructor_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="category_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="level_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="language_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="curriculum_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+
+    </createTable>
+  </changeSet>
+
+    <!-- Add foreign key constraint -->
+  <changeSet id="2" author="your-name">
+      <addForeignKeyConstraint
+              baseTableName="course"
+              baseColumnNames="instructor_id"
+              referencedTableName="instructor"
+              referencedColumnNames="id"
+              constraintName="fk_course_instructor"/>
+      <addForeignKeyConstraint
+              baseTableName="course"
+              baseColumnNames="category_id"
+              referencedTableName="category"
+              referencedColumnNames="id"
+              constraintName="fk_course_category"/>
+      <addForeignKeyConstraint
+              baseTableName="course"
+              baseColumnNames="level_id"
+              referencedTableName="level"
+              referencedColumnNames="id"
+              constraintName="fk_course_level"/>
+      <addForeignKeyConstraint
+              baseTableName="course"
+              baseColumnNames="language_id"
+              referencedTableName="language"
+              referencedColumnNames="id"
+              constraintName="fk_course_language"/>
+      <addForeignKeyConstraint
+              baseTableName="course"
+              baseColumnNames="curriculum_id"
+              referencedTableName="curriculum"
+              referencedColumnNames="id"
+              constraintName="fk_course_curriculum"/>
+
+  </changeSet>
+
+    <!-- Create Sequence for ContainerType -->
+  <changeSet id="3" author="your-name">
+    <createSequence sequenceName="course_seq" startValue="1" incrementBy="1"/>
+  </changeSet>
+
+  <!-- Load Data from CSV -->
+  <changeSet id="4" author="your-name">
+    <loadData
+            file="classpath:/db/migration/data/course/Course.csv"
+            tableName="course">
+      <column name="id" type="NUMERIC"/>
+          <column name="code" type="STRING"/>
+          <column name="label" type="STRING"/>
+          <column name="description" type="STRING"/>
+          <column name="start_date" type="TIMESTAMP"/>
+          <column name="end_date" type="TIMESTAMP"/>
+          <column name="duration" type="NUMERIC"/>
+          <column name="price" type="NUMERIC"/>
+          <column name="requirements" type="STRING"/>
+          <column name="learning_outcomes" type="STRING"/>
+        <column name="instructor" type="BIGINT"/>
+        <column name="category" type="BIGINT"/>
+        <column name="level" type="BIGINT"/>
+        <column name="language" type="BIGINT"/>
+        <column name="curriculum" type="BIGINT"/>
+    </loadData>
+  </changeSet>
+
+
+</databaseChangeLog>

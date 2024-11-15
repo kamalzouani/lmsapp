@@ -1,0 +1,384 @@
+{
+    "from-to": "العناصر من {first} إلى {last} (الإجمالي {totalRecords})",
+    "new": "جديد",
+    "search": "البحث",
+    "export": "تصدير",
+    "import": "استيراد",
+    "validate": "تحقق",
+    "delete": "حذف",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "next": "التالي",
+    "yes": "نعم",
+    "no": "لا",
+    "actions": "الإجراءات",
+    "confirm": "تأكيد",
+    "creation": "إنشاء",
+    "list": "قائمة",
+    "nom": "الاسم",
+    "email": "البريد الإلكتروني",
+    "Données personnelles" :" البيانات الشخصية",
+    "Username" :" اسم المستخدم ",
+    "Télephone" :" هاتف",
+    "Mot de passe" :"كلمة المرور",
+    "Nouveau Mot de passe" :" كلمة المرور الجديدة",
+    "Confirmer votre Mot de passe" :"تأكيد كلمة المرور الخاصة بك",
+    "prenom": "الاسم الأول" ,
+    "Changer": "تغيير",
+
+    "actionPermission": {
+    "reference": "المرجعية",
+    "libelle": "التسمية",
+    "actionPermission": "إذن العمل",
+    "tabPan": "إذن العمل",
+    "header": "قائمة إذن العمل",
+    "deleteActionPermissionConfirmationMessage": "هل أنت متأكد أنك تريد حذف إذن العمل",
+    "deleteActionPermissionsConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة"
+},
+"modelPermissionUser": {
+    "actionPermission": "إذن العمل",
+    "actionPermissionPlaceHolder": "اختر إذن العمل",
+    "actionPermissionPlaceHolderFilter": "البحث حسب إذن العمل",
+    "modelPermission": "إذن النموذج",
+    "modelPermissionPlaceHolder": "اختر إذن النموذج",
+    "modelPermissionPlaceHolderFilter": "البحث حسب إذن النموذج",
+    "value": "القيمة",
+    "user": "المستخدم",
+    "userPlaceHolder": "اختر مستخدم",
+    "userPlaceHolderFilter": "البحث حسب المستخدم",
+    "subAttribute": "السمة الفرعية",
+    "modelPermissionUser": "إذن نموذج المستخدم",
+    "tabPan": "إذن نموذج المستخدم",
+    "header": "قائمة إذن نموذج المستخدم",
+    "deleteModelPermissionUserConfirmationMessage": "هل أنت متأكد أنك تريد حذف إذن نموذج المستخدم",
+    "deleteModelPermissionUsersConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة"
+},
+"role": {
+    "authority": "السلطة",
+    "role": "الدور",
+    "tabPan": "الدور",
+    "header": "قائمة الأدوار",
+    "deleteRoleConfirmationMessage": "هل أنت متأكد أنك تريد حذف الدور",
+    "deleteRolesConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة"
+},
+"roleUser": {
+    "role": "الدور",
+    "rolePlaceHolder": "اختر دورًا",
+    "rolePlaceHolderFilter": "البحث حسب الدور",
+    "user": "المستخدم",
+    "userPlaceHolder": "اختر مستخدم",
+    "userPlaceHolderFilter": "البحث حسب المستخدم",
+    "roleUser": "مستخدم الدور",
+    "tabPan": "مستخدم الدور",
+    "header": "قائمة مستخدمي الدور",
+    "deleteRoleUserConfirmationMessage": "هل أنت متأكد أنك تريد حذف مستخدم الدور",
+    "deleteRoleUsersConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة"
+},
+"user": {
+    "credentialsNonExpired": "الاعتمادات غير منتهية الصلاحية",
+    "enabled": "تم التمكين",
+    "email": "البريد الإلكتروني",
+    "accountNonExpired": "الحساب غير منتهي",
+    "accountNonLocked": "الحساب غير مقفل",
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "passwordChanged": "تم تغيير كلمة المرور",
+    "modelPermissionUsers": "مستخدمو إذن النموذج",
+    "roleUsers": "مستخدمو الدور",
+    "RoleUsersPlaceHolder": "اختر عدة أدوار",
+    "user": "المستخدم",
+    "tabPan": "المستخدم",
+    "header": "قائمة المستخدمين",
+    "deleteUserConfirmationMessage": "هل أنت متأكد أنك تريد حذف المستخدم",
+    "deleteUsersConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة"
+},
+"modelPermission": {
+    "reference": "المرجعية",
+    "libelle": "التسمية",
+    "modelPermission": "إذن النموذج",
+    "tabPan": "إذن النموذج",
+    "header": "قائمة إذن النموذج",
+    "deleteModelPermissionConfirmationMessage": "هل أنت متأكد أنك تريد حذف إذن النموذج",
+    "deleteModelPermissionsConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة"
+},
+
+
+    "category":{
+        "code": "Code",
+        "label": "Label",
+        "style": "Style",
+        "category": "Category",
+        "tabPan": "Category",
+        "header": "Liste des categorys",
+        "deleteCategoryConfirmationMessage": "Voulez vous vraiment supprimer category",
+        "deleteCategorysConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "review":{
+        "student": "Student",
+        "studentPlaceHolder": "Select a Student",
+        "studentPlaceHolderFilter": "Search by Student",
+        "course": "Course",
+        "coursePlaceHolder": "Select a Course",
+        "coursePlaceHolderFilter": "Search by Course",
+        "rating": "Rating",
+        "ratingMin": "Rating Min",
+        "ratingMax": "Rating Max",
+        "comment": "Comment",
+        "reviewDate": "Review date",
+        "reviewDateMin": "Review date Min",
+        "reviewDateMax": "Review date Max",
+        "review": "Review",
+        "tabPan": "Review",
+        "header": "Liste des reviews",
+        "deleteReviewConfirmationMessage": "Voulez vous vraiment supprimer review",
+        "deleteReviewsConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "paymentState":{
+        "code": "Code",
+        "label": "Label",
+        "style": "Style",
+        "paymentState": "Payment state",
+        "tabPan": "Payment state",
+        "header": "Liste des payment states",
+        "deletePaymentStateConfirmationMessage": "Voulez vous vraiment supprimer payment state",
+        "deletePaymentStatesConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "level":{
+        "code": "Code",
+        "label": "Label",
+        "style": "Style",
+        "level": "Level",
+        "tabPan": "Level",
+        "header": "Liste des levels",
+        "deleteLevelConfirmationMessage": "Voulez vous vraiment supprimer level",
+        "deleteLevelsConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "language":{
+        "code": "Code",
+        "label": "Label",
+        "style": "Style",
+        "language": "Language",
+        "tabPan": "Language",
+        "header": "Liste des languages",
+        "deleteLanguageConfirmationMessage": "Voulez vous vraiment supprimer language",
+        "deleteLanguagesConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "curriculum":{
+        "course": "Course",
+        "coursePlaceHolder": "Select a Course",
+        "coursePlaceHolderFilter": "Search by Course",
+        "modules": "Modules",
+        "curriculum": "Curriculum",
+        "tabPan": "Curriculum",
+        "header": "Liste des curriculums",
+        "deleteCurriculumConfirmationMessage": "Voulez vous vraiment supprimer curriculum",
+        "deleteCurriculumsConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "student":{
+        "credentialsNonExpired": "Credentials non expired",
+        "accountNonExpired": "Account non expired",
+        "username": "Username",
+        "passwordChanged": "Password changed",
+        "accountNonLocked": "Account non locked",
+        "password": "Password",
+        "email": "Email",
+        "enabled": "Enabled",
+        "student": "Student",
+        "tabPan": "Student",
+        "header": "Liste des students",
+        "deleteStudentConfirmationMessage": "Voulez vous vraiment supprimer student",
+        "deleteStudentsConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "enrollmentState":{
+        "code": "Code",
+        "label": "Label",
+        "style": "Style",
+        "enrollmentState": "Enrollment state",
+        "tabPan": "Enrollment state",
+        "header": "Liste des enrollment states",
+        "deleteEnrollmentStateConfirmationMessage": "Voulez vous vraiment supprimer enrollment state",
+        "deleteEnrollmentStatesConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "enrollment":{
+        "student": "Student",
+        "studentPlaceHolder": "Select a Student",
+        "studentPlaceHolderFilter": "Search by Student",
+        "course": "Course",
+        "coursePlaceHolder": "Select a Course",
+        "coursePlaceHolderFilter": "Search by Course",
+        "enrollmentDate": "Enrollment date",
+        "enrollmentDateMin": "Enrollment date Min",
+        "enrollmentDateMax": "Enrollment date Max",
+        "enrollmentState": "Enrollment state",
+        "enrollmentStatePlaceHolder": "Select a Enrollment state",
+        "enrollmentStatePlaceHolderFilter": "Search by Enrollment state",
+        "enrollment": "Enrollment",
+        "tabPan": "Enrollment",
+        "header": "Liste des enrollments",
+        "deleteEnrollmentConfirmationMessage": "Voulez vous vraiment supprimer enrollment",
+        "deleteEnrollmentsConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "lesson":{
+        "module": "Module",
+        "modulePlaceHolder": "Select a Module",
+        "modulePlaceHolderFilter": "Search by Module",
+        "label": "Label",
+        "description": "Description",
+        "content": "Content",
+        "resources": "Resources",
+        "lesson": "Lesson",
+        "tabPan": "Lesson",
+        "header": "Liste des lessons",
+        "deleteLessonConfirmationMessage": "Voulez vous vraiment supprimer lesson",
+        "deleteLessonsConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "resource":{
+        "lesson": "Lesson",
+        "lessonPlaceHolder": "Select a Lesson",
+        "lessonPlaceHolderFilter": "Search by Lesson",
+        "type": "Type",
+        "url": "Url",
+        "file": "File",
+        "resource": "Resource",
+        "tabPan": "Resource",
+        "header": "Liste des resources",
+        "deleteResourceConfirmationMessage": "Voulez vous vraiment supprimer resource",
+        "deleteResourcesConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "instructor":{
+        "bio": "Bio",
+        "credentialsNonExpired": "Credentials non expired",
+        "accountNonExpired": "Account non expired",
+        "username": "Username",
+        "passwordChanged": "Password changed",
+        "accountNonLocked": "Account non locked",
+        "password": "Password",
+        "email": "Email",
+        "enabled": "Enabled",
+        "instructor": "Instructor",
+        "tabPan": "Instructor",
+        "header": "Liste des instructors",
+        "deleteInstructorConfirmationMessage": "Voulez vous vraiment supprimer instructor",
+        "deleteInstructorsConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "module":{
+        "curriculum": "Curriculum",
+        "curriculumPlaceHolder": "Select a Curriculum",
+        "curriculumPlaceHolderFilter": "Search by Curriculum",
+        "label": "Label",
+        "description": "Description",
+        "lessons": "Lessons",
+        "module": "Module",
+        "tabPan": "Module",
+        "header": "Liste des modules",
+        "deleteModuleConfirmationMessage": "Voulez vous vraiment supprimer module",
+        "deleteModulesConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "course":{
+        "code": "Code",
+        "label": "Label",
+        "description": "Description",
+        "startDate": "Start date",
+        "startDateMin": "Start date Min",
+        "startDateMax": "Start date Max",
+        "endDate": "End date",
+        "endDateMin": "End date Min",
+        "endDateMax": "End date Max",
+        "duration": "Duration",
+        "durationMin": "Duration Min",
+        "durationMax": "Duration Max",
+        "price": "Price",
+        "priceMin": "Price Min",
+        "priceMax": "Price Max",
+        "instructor": "Instructor",
+        "instructorPlaceHolder": "Select a Instructor",
+        "instructorPlaceHolderFilter": "Search by Instructor",
+        "category": "Category",
+        "categoryPlaceHolder": "Select a Category",
+        "categoryPlaceHolderFilter": "Search by Category",
+        "level": "Level",
+        "levelPlaceHolder": "Select a Level",
+        "levelPlaceHolderFilter": "Search by Level",
+        "language": "Language",
+        "languagePlaceHolder": "Select a Language",
+        "languagePlaceHolderFilter": "Search by Language",
+        "requirements": "Requirements",
+        "learningOutcomes": "Learning outcomes",
+        "curriculum": "Curriculum",
+        "curriculumPlaceHolder": "Select a Curriculum",
+        "curriculumPlaceHolderFilter": "Search by Curriculum",
+        "course": "Course",
+        "tabPan": "Course",
+        "header": "Liste des courses",
+        "deleteCourseConfirmationMessage": "Voulez vous vraiment supprimer course",
+        "deleteCoursesConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "payment":{
+        "student": "Student",
+        "studentPlaceHolder": "Select a Student",
+        "studentPlaceHolderFilter": "Search by Student",
+        "course": "Course",
+        "coursePlaceHolder": "Select a Course",
+        "coursePlaceHolderFilter": "Search by Course",
+        "amount": "Amount",
+        "amountMin": "Amount Min",
+        "amountMax": "Amount Max",
+        "paymentDate": "Payment date",
+        "paymentDateMin": "Payment date Min",
+        "paymentDateMax": "Payment date Max",
+        "paymentState": "Payment state",
+        "paymentStatePlaceHolder": "Select a Payment state",
+        "paymentStatePlaceHolderFilter": "Search by Payment state",
+        "payment": "Payment",
+        "tabPan": "Payment",
+        "header": "Liste des payments",
+        "deletePaymentConfirmationMessage": "Voulez vous vraiment supprimer payment",
+        "deletePaymentsConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+"appName": "GED"
+
+  }

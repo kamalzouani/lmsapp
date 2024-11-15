@@ -1,0 +1,22 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+            <include file="classpath:db/migration/changelog/course/Category.xml"/>
+        <include file="classpath:db/migration/changelog/student/Review.xml"/>
+        <include file="classpath:db/migration/changelog/student/PaymentState.xml"/>
+        <include file="classpath:db/migration/changelog/course/Level.xml"/>
+        <include file="classpath:db/migration/changelog/course/Language.xml"/>
+        <include file="classpath:db/migration/changelog/course/Curriculum.xml"/>
+        <include file="classpath:db/migration/changelog/student/Student.xml"/>
+        <include file="classpath:db/migration/changelog/student/EnrollmentState.xml"/>
+        <include file="classpath:db/migration/changelog/student/Enrollment.xml"/>
+        <include file="classpath:db/migration/changelog/course/Lesson.xml"/>
+        <include file="classpath:db/migration/changelog/course/Resource.xml"/>
+        <include file="classpath:db/migration/changelog/instructor/Instructor.xml"/>
+        <include file="classpath:db/migration/changelog/course/Module.xml"/>
+        <include file="classpath:db/migration/changelog/course/Course.xml"/>
+        <include file="classpath:db/migration/changelog/student/Payment.xml"/>
+
+</databaseChangeLog>

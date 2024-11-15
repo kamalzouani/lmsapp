@@ -1,0 +1,1239 @@
+openapi: 3.0.3
+info:
+  title: Title
+  description: Title
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /categorys:
+    get:
+      summary: List all categorys
+      operationId: listCategorys
+      tags:
+        - categorys
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of categorys
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Categorys'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a category
+      operationId: createCategorys
+      tags:
+        - categorys
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /categorys/{categoryId}:
+    get:
+      summary: Info for a specific category
+      operationId: showCategoryById
+      tags:
+        - categorys
+      parameters:
+        - name: categoryId
+          in: path
+          required: true
+          description: The id of the category to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Categorys'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /reviews:
+    get:
+      summary: List all reviews
+      operationId: listReviews
+      tags:
+        - reviews
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of reviews
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Reviews'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a review
+      operationId: createReviews
+      tags:
+        - reviews
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /reviews/{reviewId}:
+    get:
+      summary: Info for a specific review
+      operationId: showReviewById
+      tags:
+        - reviews
+      parameters:
+        - name: reviewId
+          in: path
+          required: true
+          description: The id of the review to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Reviews'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /paymentStates:
+    get:
+      summary: List all paymentStates
+      operationId: listPaymentStates
+      tags:
+        - paymentStates
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of paymentStates
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/PaymentStates'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a paymentState
+      operationId: createPaymentStates
+      tags:
+        - paymentStates
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /paymentStates/{paymentStateId}:
+    get:
+      summary: Info for a specific paymentState
+      operationId: showPaymentStateById
+      tags:
+        - paymentStates
+      parameters:
+        - name: paymentStateId
+          in: path
+          required: true
+          description: The id of the paymentState to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/PaymentStates'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /levels:
+    get:
+      summary: List all levels
+      operationId: listLevels
+      tags:
+        - levels
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of levels
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Levels'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a level
+      operationId: createLevels
+      tags:
+        - levels
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /levels/{levelId}:
+    get:
+      summary: Info for a specific level
+      operationId: showLevelById
+      tags:
+        - levels
+      parameters:
+        - name: levelId
+          in: path
+          required: true
+          description: The id of the level to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Levels'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /languages:
+    get:
+      summary: List all languages
+      operationId: listLanguages
+      tags:
+        - languages
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of languages
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Languages'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a language
+      operationId: createLanguages
+      tags:
+        - languages
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /languages/{languageId}:
+    get:
+      summary: Info for a specific language
+      operationId: showLanguageById
+      tags:
+        - languages
+      parameters:
+        - name: languageId
+          in: path
+          required: true
+          description: The id of the language to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Languages'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /curriculums:
+    get:
+      summary: List all curriculums
+      operationId: listCurriculums
+      tags:
+        - curriculums
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of curriculums
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Curriculums'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a curriculum
+      operationId: createCurriculums
+      tags:
+        - curriculums
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /curriculums/{curriculumId}:
+    get:
+      summary: Info for a specific curriculum
+      operationId: showCurriculumById
+      tags:
+        - curriculums
+      parameters:
+        - name: curriculumId
+          in: path
+          required: true
+          description: The id of the curriculum to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Curriculums'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /students:
+    get:
+      summary: List all students
+      operationId: listStudents
+      tags:
+        - students
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of students
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Students'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a student
+      operationId: createStudents
+      tags:
+        - students
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /students/{studentId}:
+    get:
+      summary: Info for a specific student
+      operationId: showStudentById
+      tags:
+        - students
+      parameters:
+        - name: studentId
+          in: path
+          required: true
+          description: The id of the student to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Students'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /enrollmentStates:
+    get:
+      summary: List all enrollmentStates
+      operationId: listEnrollmentStates
+      tags:
+        - enrollmentStates
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of enrollmentStates
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/EnrollmentStates'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a enrollmentState
+      operationId: createEnrollmentStates
+      tags:
+        - enrollmentStates
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /enrollmentStates/{enrollmentStateId}:
+    get:
+      summary: Info for a specific enrollmentState
+      operationId: showEnrollmentStateById
+      tags:
+        - enrollmentStates
+      parameters:
+        - name: enrollmentStateId
+          in: path
+          required: true
+          description: The id of the enrollmentState to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/EnrollmentStates'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /enrollments:
+    get:
+      summary: List all enrollments
+      operationId: listEnrollments
+      tags:
+        - enrollments
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of enrollments
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Enrollments'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a enrollment
+      operationId: createEnrollments
+      tags:
+        - enrollments
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /enrollments/{enrollmentId}:
+    get:
+      summary: Info for a specific enrollment
+      operationId: showEnrollmentById
+      tags:
+        - enrollments
+      parameters:
+        - name: enrollmentId
+          in: path
+          required: true
+          description: The id of the enrollment to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Enrollments'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /lessons:
+    get:
+      summary: List all lessons
+      operationId: listLessons
+      tags:
+        - lessons
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of lessons
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Lessons'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a lesson
+      operationId: createLessons
+      tags:
+        - lessons
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /lessons/{lessonId}:
+    get:
+      summary: Info for a specific lesson
+      operationId: showLessonById
+      tags:
+        - lessons
+      parameters:
+        - name: lessonId
+          in: path
+          required: true
+          description: The id of the lesson to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Lessons'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /resources:
+    get:
+      summary: List all resources
+      operationId: listResources
+      tags:
+        - resources
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of resources
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Resources'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a resource
+      operationId: createResources
+      tags:
+        - resources
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /resources/{resourceId}:
+    get:
+      summary: Info for a specific resource
+      operationId: showResourceById
+      tags:
+        - resources
+      parameters:
+        - name: resourceId
+          in: path
+          required: true
+          description: The id of the resource to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Resources'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /instructors:
+    get:
+      summary: List all instructors
+      operationId: listInstructors
+      tags:
+        - instructors
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of instructors
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Instructors'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a instructor
+      operationId: createInstructors
+      tags:
+        - instructors
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /instructors/{instructorId}:
+    get:
+      summary: Info for a specific instructor
+      operationId: showInstructorById
+      tags:
+        - instructors
+      parameters:
+        - name: instructorId
+          in: path
+          required: true
+          description: The id of the instructor to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Instructors'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /modules:
+    get:
+      summary: List all modules
+      operationId: listModules
+      tags:
+        - modules
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of modules
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Modules'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a module
+      operationId: createModules
+      tags:
+        - modules
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /modules/{moduleId}:
+    get:
+      summary: Info for a specific module
+      operationId: showModuleById
+      tags:
+        - modules
+      parameters:
+        - name: moduleId
+          in: path
+          required: true
+          description: The id of the module to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Modules'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /courses:
+    get:
+      summary: List all courses
+      operationId: listCourses
+      tags:
+        - courses
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of courses
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Courses'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a course
+      operationId: createCourses
+      tags:
+        - courses
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /courses/{courseId}:
+    get:
+      summary: Info for a specific course
+      operationId: showCourseById
+      tags:
+        - courses
+      parameters:
+        - name: courseId
+          in: path
+          required: true
+          description: The id of the course to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Courses'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /payments:
+    get:
+      summary: List all payments
+      operationId: listPayments
+      tags:
+        - payments
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of payments
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Payments'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a payment
+      operationId: createPayments
+      tags:
+        - payments
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /payments/{paymentId}:
+    get:
+      summary: Info for a specific payment
+      operationId: showPaymentById
+      tags:
+        - payments
+      parameters:
+        - name: paymentId
+          in: path
+          required: true
+          description: The id of the payment to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Payments'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  
+
+
+definitions:
+  Category:
+    type: "object"
+    required:
+      - id
+      - code
+      - label
+      - style
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      label:
+        type: string
+      style:
+        type: string
+  Categorys:
+    type: array
+    items:
+      $ref: '#/definitions/Category'
+  Review:
+    type: "object"
+    required:
+      - id
+      - rating
+      - comment
+      - reviewDate
+    properties:
+      id:
+        type: int
+      rating:
+        type: number
+      comment:
+        type: string
+      reviewDate:
+        type: date
+  Reviews:
+    type: array
+    items:
+      $ref: '#/definitions/Review'
+  PaymentState:
+    type: "object"
+    required:
+      - id
+      - code
+      - label
+      - style
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      label:
+        type: string
+      style:
+        type: string
+  PaymentStates:
+    type: array
+    items:
+      $ref: '#/definitions/PaymentState'
+  Level:
+    type: "object"
+    required:
+      - id
+      - code
+      - label
+      - style
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      label:
+        type: string
+      style:
+        type: string
+  Levels:
+    type: array
+    items:
+      $ref: '#/definitions/Level'
+  Language:
+    type: "object"
+    required:
+      - id
+      - code
+      - label
+      - style
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      label:
+        type: string
+      style:
+        type: string
+  Languages:
+    type: array
+    items:
+      $ref: '#/definitions/Language'
+  Curriculum:
+    type: "object"
+    required:
+      - id
+    properties:
+      id:
+        type: int
+  Curriculums:
+    type: array
+    items:
+      $ref: '#/definitions/Curriculum'
+  Student:
+    type: "object"
+    required:
+      - id
+      - credentialsNonExpired
+      - accountNonExpired
+      - username
+      - passwordChanged
+      - accountNonLocked
+      - password
+      - email
+      - enabled
+    properties:
+      id:
+        type: int
+      credentialsNonExpired:
+        type: boolean
+      accountNonExpired:
+        type: boolean
+      username:
+        type: string
+      passwordChanged:
+        type: boolean
+      accountNonLocked:
+        type: boolean
+      password:
+        type: string
+      email:
+        type: string
+      enabled:
+        type: boolean
+  Students:
+    type: array
+    items:
+      $ref: '#/definitions/Student'
+  EnrollmentState:
+    type: "object"
+    required:
+      - id
+      - code
+      - label
+      - style
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      label:
+        type: string
+      style:
+        type: string
+  EnrollmentStates:
+    type: array
+    items:
+      $ref: '#/definitions/EnrollmentState'
+  Enrollment:
+    type: "object"
+    required:
+      - id
+      - enrollmentDate
+    properties:
+      id:
+        type: int
+      enrollmentDate:
+        type: date
+  Enrollments:
+    type: array
+    items:
+      $ref: '#/definitions/Enrollment'
+  Lesson:
+    type: "object"
+    required:
+      - id
+      - label
+      - description
+      - content
+    properties:
+      id:
+        type: int
+      label:
+        type: string
+      description:
+        type: string
+      content:
+        type: string
+  Lessons:
+    type: array
+    items:
+      $ref: '#/definitions/Lesson'
+  Resource:
+    type: "object"
+    required:
+      - id
+      - type
+      - url
+      - file
+    properties:
+      id:
+        type: int
+      type:
+        type: string
+      url:
+        type: string
+      file:
+        type: string
+  Resources:
+    type: array
+    items:
+      $ref: '#/definitions/Resource'
+  Instructor:
+    type: "object"
+    required:
+      - id
+      - bio
+      - credentialsNonExpired
+      - accountNonExpired
+      - username
+      - passwordChanged
+      - accountNonLocked
+      - password
+      - email
+      - enabled
+    properties:
+      id:
+        type: int
+      bio:
+        type: string
+      credentialsNonExpired:
+        type: boolean
+      accountNonExpired:
+        type: boolean
+      username:
+        type: string
+      passwordChanged:
+        type: boolean
+      accountNonLocked:
+        type: boolean
+      password:
+        type: string
+      email:
+        type: string
+      enabled:
+        type: boolean
+  Instructors:
+    type: array
+    items:
+      $ref: '#/definitions/Instructor'
+  Module:
+    type: "object"
+    required:
+      - id
+      - label
+      - description
+    properties:
+      id:
+        type: int
+      label:
+        type: string
+      description:
+        type: string
+  Modules:
+    type: array
+    items:
+      $ref: '#/definitions/Module'
+  Course:
+    type: "object"
+    required:
+      - id
+      - code
+      - label
+      - description
+      - startDate
+      - endDate
+      - duration
+      - price
+      - requirements
+      - learningOutcomes
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      label:
+        type: string
+      description:
+        type: string
+      startDate:
+        type: date
+      endDate:
+        type: date
+      duration:
+        type: number
+      price:
+        type: number
+      requirements:
+        type: string
+      learningOutcomes:
+        type: string
+  Courses:
+    type: array
+    items:
+      $ref: '#/definitions/Course'
+  Payment:
+    type: "object"
+    required:
+      - id
+      - amount
+      - paymentDate
+    properties:
+      id:
+        type: int
+      amount:
+        type: number
+      paymentDate:
+        type: date
+  Payments:
+    type: array
+    items:
+      $ref: '#/definitions/Payment'
+
+  Error:
+    type: "object"
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
